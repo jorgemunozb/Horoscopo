@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <div class="contenedor">
+    <ion-row>
+      <ion-col>
+        <ion-tab-button (click)="verSigno('aries')"> 
+          <img src="assets/icon/aries.png" alt="logo aries">
+          <ion-label>Aries</ion-label>
+        </ion-tab-button>
+      </ion-col>
+      <ion-col>
+        <ion-tab-button (click)="verSigno('tauro')"> 
+          <img src="assets/icon/taurus.png" alt="logo tauro">
+          <ion-label>Tauro</ion-label>
+        </ion-tab-button>
+      </ion-col>
+      <ion-col>
+        <ion-tab-button (click)="verSigno('geminis')"> 
+          <img src="assets/icon/gemini.png" alt="logo geminis">
+          <ion-label>Geminis</ion-label>
+        </ion-tab-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
