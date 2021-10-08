@@ -1,27 +1,39 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+*{
   margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
 
-#container a {
-  text-decoration: none;
+.contenedor{
+  background: linear-gradient(rgb(177, 13, 150), rgb(89, 8, 136));
+  height: 100%;
+  padding-top: 5px;
+}
+
+
+h6, h5{
+  line-height: 30px;
+}
+
+p{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.titulo{
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  line-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+ion-back-button{
+  color: rgb(177, 13, 150);
+
+}
+
+ion-title{
+  margin-left: center;
+  color: rgb(177, 13, 150);
 }
