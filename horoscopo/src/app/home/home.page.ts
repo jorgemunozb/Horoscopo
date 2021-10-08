@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../services/api/api.service';
 
 @Component({
@@ -7,17 +8,18 @@ import { ApiService } from '../services/api/api.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
-
+  signo: string;
   data: any;
 
-  constructor(private api: ApiService) {}
-
+  constructor(private api: ApiService, private router: Router) {
+    this.signo = this.router.getCurrentNavigation().extras.queryParams.signo;
+  }
 
 
   ngOnInit(){
-    this.api.getHoroscopo().then(data=>{
-      this.data = data;
+    //almacenar la info data en una variable
+    this.api.getHoroscopo().then((data: any) => {
+      this.data= data.horoscopo[this.signo];
     });
   }
-
 }

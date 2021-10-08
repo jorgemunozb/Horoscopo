@@ -1,4 +1,8 @@
+/* eslint-disable object-shorthand */
+/* eslint-disable quote-props */
+/* eslint-disable prefer-const */
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado',
@@ -7,7 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  verSigno(signo: string){
+    let nav: NavigationExtras = {
+      queryParams : {
+        'signo' : signo
+      }
+    };
+    this.router.navigate(['home/'], nav);
+  }
 
   ngOnInit() {
   }
